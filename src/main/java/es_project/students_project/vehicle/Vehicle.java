@@ -9,12 +9,12 @@ public class Vehicle {
     private int id;
     private String marca;
     private String modelo;
+    private Combustiveis combustivel;
+    private Date data;
     private double preco;
     private double cilindrada;
     private int cavalos;
     private int quilometros;
-    private Combustiveis combustivel;
-    private Date data;
 
     public Vehicle() {
 
