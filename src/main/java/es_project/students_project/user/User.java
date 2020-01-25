@@ -1,9 +1,11 @@
 package es_project.students_project.user;
 
+import java.util.Date;
+
 public class User {
     private String email;
     private String nome_completo;
-    private String data_nascimento;
+    private Date data_nascimento;
     private String password;
     private String nif;
     private String morada;
@@ -22,7 +24,7 @@ public class User {
         this.nome_completo = nome_completo;
     }
 
-    public void setData_nascimento(String data_nascimento) {
+    public void setData_nascimento(Date data_nascimento) {
         this.data_nascimento = data_nascimento;
     }
 
@@ -54,7 +56,7 @@ public class User {
         return nome_completo;
     }
 
-    public String getData_nascimento() {
+    public Date getData_nascimento() {
         return data_nascimento;
     }
 

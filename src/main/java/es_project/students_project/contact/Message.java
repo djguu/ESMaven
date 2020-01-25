@@ -2,17 +2,19 @@ package es_project.students_project.contact;
 
 import java.sql.Timestamp;
 
+import static java.lang.Boolean.*;
+
 public class Message {
     private Contact contact;
     private String timestamp;
     private String message;
-    private String read;
+    private Boolean read;
 
     public Message(Contact contact, String message){
         this.contact = contact;
         this.message = message;
         this.timestamp = new Timestamp(System.currentTimeMillis()).toString();
-        this.read = "0";
+        this.read = FALSE;
     }
 
     public Contact getContact() {
@@ -39,11 +41,14 @@ public class Message {
         this.message = message;
     }
 
-    public String getRead() {
-        return read;
+    //Set message as read
+    public void message_read(){
+        if (this.read.equals(FALSE))
+            this.read = TRUE;
     }
 
-    public void setRead(String read) {
-        this.read = read;
+    //Verifies if message is read
+    public boolean read(){
+        return this.read;
     }
 }

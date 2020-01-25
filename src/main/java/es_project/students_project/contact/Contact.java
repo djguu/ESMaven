@@ -3,8 +3,9 @@ package es_project.students_project.contact;
 import es_project.students_project.user.User;
 
 
-import java.sql.Timestamp;
 import java.util.*;
+
+import static java.lang.Boolean.*;
 
 public class Contact {
     private User user;
@@ -39,16 +40,5 @@ public class Contact {
     // Update messages list
     public void updateMessages(List<Message> messages) {
         this.messages = messages;
-    }
-
-    public void message_read(Message message){
-        if (message.getRead().equals("0"))
-            message.setRead("1");
-    }
-
-    public boolean read(Message message){
-        if(message.getRead().equals("0"))
-            return Boolean.FALSE;
-        return Boolean.TRUE;
     }
 }
