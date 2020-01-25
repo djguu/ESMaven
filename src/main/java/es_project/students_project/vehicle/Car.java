@@ -3,6 +3,7 @@ package es_project.students_project.vehicle;
 public class Car extends Vehicle {
     private int nr_doors;
     private boolean ac;
+    private String tejadilho;
 
     public Car(){
 
@@ -22,5 +23,13 @@ public class Car extends Vehicle {
 
     public void setAc(boolean ac) {
         this.ac = ac;
+    }
+
+    public String getTejadilho() {
+        return tejadilho;
+    }
+
+    public void setTejadilho(String tejadilho) {
+        this.tejadilho = tejadilho;
     }
 }

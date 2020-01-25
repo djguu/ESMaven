@@ -11,6 +11,8 @@ public class User {
     private String morada;
     private String telemovel;
     private Boolean admin;
+    //TODO Sistema guarda o historico de mensagens e transaçoes
+    // maybe Registo + Login ? Rever opçao
 
     public User(){
 
