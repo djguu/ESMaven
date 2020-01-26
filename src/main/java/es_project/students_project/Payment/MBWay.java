@@ -3,7 +3,7 @@ package es_project.students_project.Payment;
 import es_project.students_project.ad.Compra;
 
 public class MBWay extends Payment {
-    MBWay(Compra compra) {
+    public MBWay(Compra compra) {
         super(compra);
     }
 }
