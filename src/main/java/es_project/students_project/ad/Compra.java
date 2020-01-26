@@ -16,7 +16,7 @@ public class Compra<Payment> {
            case "mbway": this.payment = (Payment) new MBWay(this); break;
            case "paypal": this.payment = (Payment) new Paypal(this); break;
            case "multibanco": this.payment = (Payment) new Multibanco(this); break;
-           default: 
+           default:
        }
     }
 
