@@ -6,14 +6,14 @@ import static java.lang.Boolean.*;
 
 public class Message {
     private Contact contact;
-    private String timestamp;
+    private Timestamp timestamp;
     private String message;
     private Boolean read;
 
     public Message(Contact contact, String message){
         this.contact = contact;
         this.message = message;
-        this.timestamp = new Timestamp(System.currentTimeMillis()).toString();
+        this.timestamp = new Timestamp(System.currentTimeMillis());
         this.read = FALSE;
     }
 
@@ -25,11 +25,11 @@ public class Message {
         this.contact = contact;
     }
 
-    public String getTimestamp() {
+    public Timestamp getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(String timestamp) {
+    public void setTimestamp(Timestamp timestamp) {
         this.timestamp = timestamp;
     }
 
