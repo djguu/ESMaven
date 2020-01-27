@@ -1,7 +1,7 @@
 package es_project.students_project;
 
 
-import es_project.students_project.vehicle.Combustiveis;
+import es_project.students_project.user.User;
 import es_project.students_project.vehicle.Vehicle;
 
 import javax.swing.table.DefaultTableModel;
@@ -9,13 +9,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Website {
+    private User user;
 
     public Website(){
 
     }
 
-    public void login(){
+    public void login(String email, String password){
         //enables user to login
+        User user = new User(email, password);
+        if user.exists()
     }
 
     public void register(){

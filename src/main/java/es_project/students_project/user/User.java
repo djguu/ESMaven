@@ -1,8 +1,11 @@
 package es_project.students_project.user;
 
+import es_project.students_project.ad.CompraHistory;
 import es_project.students_project.contact.MessageHistory;
 
 import java.util.Date;
+
+import static java.lang.Boolean.*;
 
 public class User {
     private String email;
@@ -14,18 +17,13 @@ public class User {
     private String telemovel;
     private Boolean admin;
     private MessageHistory messageHistory;
+    private CompraHistory compraHistory;
     //TODO Sistema guarda o historico de mensagens e transaçoes
     // maybe Registo + Login ? Rever opçao
 
-    public User(String email, String nome_completo, Date data_nascimento, String password, String nif, String morada, String telemovel, Boolean admin){
+    public User(String email, String password){
         this.email = email;
-        this.nome_completo = nome_completo;
-        this.data_nascimento = data_nascimento;
         this.password = password;
-        this.nif = nif;
-        this.morada = morada;
-        this.telemovel = telemovel;
-        this.admin = admin;
         this.messageHistory = new MessageHistory(this);
     }
 
@@ -91,5 +89,18 @@ public class User {
 
     public Boolean getAdmin() {
         return admin;
+    }
+
+    public Boolean exists(){
+        //Simulation, connects to db with user and locates if exists
+        //Model db = new Model(...)
+//        if(db.getUser(this.user)){
+            return TRUE;
+//        }
+//        return FALSE;
+    }
+
+    public Boolean passwordMatch(String password){
+        
     }
 }
