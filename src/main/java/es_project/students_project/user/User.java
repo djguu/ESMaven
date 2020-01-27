@@ -1,5 +1,7 @@
 package es_project.students_project.user;
 
+import es_project.students_project.contact.MessageHistory;
+
 import java.util.Date;
 
 public class User {
@@ -11,11 +13,20 @@ public class User {
     private String morada;
     private String telemovel;
     private Boolean admin;
+    private MessageHistory messageHistory;
     //TODO Sistema guarda o historico de mensagens e transaçoes
     // maybe Registo + Login ? Rever opçao
 
-    public User(){
-
+    public User(String email, String nome_completo, Date data_nascimento, String password, String nif, String morada, String telemovel, Boolean admin){
+        this.email = email;
+        this.nome_completo = nome_completo;
+        this.data_nascimento = data_nascimento;
+        this.password = password;
+        this.nif = nif;
+        this.morada = morada;
+        this.telemovel = telemovel;
+        this.admin = admin;
+        this.messageHistory = new MessageHistory(this);
     }
 
     public void setEmail(String email) {
