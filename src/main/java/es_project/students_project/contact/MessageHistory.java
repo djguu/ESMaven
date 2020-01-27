@@ -16,7 +16,8 @@ public class MessageHistory {
         return this.messages;
     }
 
-    private void DBGetAllMessages(User user){
-        //connects to db
+    private void DBGetAllMessages(){
+        User user = this.user;
+        //connects to db using user
     }
 }

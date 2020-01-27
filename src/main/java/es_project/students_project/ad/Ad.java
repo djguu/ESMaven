@@ -10,13 +10,7 @@ public class Ad {
     private String main_pic;
     private String[] pics;
 
-    public Ad(User owner, Vehicle vehicle, String description, String main_pic, String[] pics){
-        this.owner = owner;
-        this.vehicle = vehicle;
-        this.description = description;
-        this.main_pic = main_pic;
-        this.pics = pics;
-    }
+    public Ad(){}
 
 
     public User getOwner() {

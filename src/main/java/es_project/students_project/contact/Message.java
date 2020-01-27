@@ -42,7 +42,7 @@ public class Message {
     }
 
     //Set message as read
-    public void message_read(){
+    public void setMessageRead(){
         if (this.read.equals(FALSE))
             this.read = TRUE;
     }

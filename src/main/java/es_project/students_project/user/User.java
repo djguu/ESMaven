@@ -21,9 +21,8 @@ public class User {
     //TODO Sistema guarda o historico de mensagens e transaçoes
     // maybe Registo + Login ? Rever opçao
 
-    public User(String email, String password){
+    public User(String email){
         this.email = email;
-        this.password = password;
         this.messageHistory = new MessageHistory(this);
     }
 
@@ -95,12 +94,16 @@ public class User {
         //Simulation, connects to db with user and locates if exists
         //Model db = new Model(...)
 //        if(db.getUser(this.user)){
-            return TRUE;
+//            this.password = db.getPassword();         // GETS PASSWORD FROM DB
+              return TRUE;
 //        }
 //        return FALSE;
     }
 
     public Boolean passwordMatch(String password){
-        
+        if (this.password.equals(password)){
+            return TRUE;
+        }
+        return FALSE;
     }
 }
